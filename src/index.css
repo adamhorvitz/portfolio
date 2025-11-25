@@ -1,12 +1,62 @@
 :root {
-  --bg-color: #0f172a;
-  --text-color: #e2e8f0;
+  --bg-color: #050914;
+  /* Deep space blue/black */
+  --text-color: #f8fafc;
+  /* Bright white/silver for better contrast */
   --primary-color: #38bdf8;
-  --secondary-color: #94a3b8;
-  --accent-color: #f472b6;
-  --card-bg: #1e293b;
-  --card-border: #334155;
+  /* Electric Blue */
+  --secondary-color: #cbd5e1;
+  /* Soft Silver/White */
+  --accent-color: #ffd700;
+  /* Galactic Gold/Yellow */
+  --card-bg: rgba(30, 41, 59, 0.7);
+  /* Semi-transparent for stars to show through */
+  --card-border: rgba(56, 189, 248, 0.3);
+  /* Subtle blue border */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Star Animations */
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-2000px);
+  }
 }
 
 html {
